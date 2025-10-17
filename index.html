@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Mol & Stoikiometri</title>
+    <link rel="stylesheet" href="style-kimia.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Kalkulator Konsep Mol</h1>
+        <p>Alat bantu hitung Mr dan konversi mol-massa untuk stoikiometri.</p>
+
+        <section id="mr-calculator">
+            <h2>1. Hitung Massa Molar (Mr) dan Rincian Ar</h2>
+            <p style="text-align: left; font-size: 0.9em; color: #555;">
+                Catatan: Kalkulator ini tidak mendukung tanda kurung (misalnya Ca(OH)2).
+                Masukkan rumus tanpa kurung (misalnya CaO2H2).
+            </p>
+            <div class="input-group">
+                <label for="rumus-kimia">Rumus Kimia (Contoh: H2O, C6H12O6):</label>
+                <input type="text" id="rumus-kimia" placeholder="Contoh: H2O" value="H2O">
+            </div>
+            <button id="hitung-mr-btn">Hitung Mr</button>
+            <div class="result" id="mr-result">
+                <p>Masukkan rumus kimia dan tekan Hitung.</p>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section id="mol-mass-converter">
+            <h2>2. Konversi Mol ↔ Massa ↔ Mr</h2>
+            <p>Masukkan TEPAT dua nilai (Mol, Massa, Mr) untuk mendapatkan nilai ketiga.</p>
+            <div class="input-group">
+                <label for="mol-input">Jumlah Mol (n):</label>
+                <input type="number" id="mol-input" placeholder="0.5" min="0">
+            </div>
+            <div class="input-group">
+                <label for="massa-input">Massa (gram):</label>
+                <input type="number" id="massa-input" placeholder="9.0" min="0">
+            </div>
+            <div class="input-group">
+                <label for="mr-input">Massa Molar (Mr):</label>
+                <input type="number" id="mr-input" placeholder="18.0" min="0">
+            </div>
+            <button id="konversi-mol-btn">Konversi</button>
+            <div class="result" id="mol-konversi-result"></div>
+        </section>
+    </div>
+    
+    <script src="kalkulator-mol.js"></script>
+</body>
+</html>
